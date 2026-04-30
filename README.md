@@ -59,6 +59,8 @@ Projekt został przygotowany w sposób umożliwiający przyszłą rozbudowę o b
 
 ## Autor 
 
-Aleksandra Frąk
+**Aleksandra Frąk**
+
 Informatyka II stopiń, rok I, semestr II
+
 Katolicki Uniwersytet Lubelski Jana Pawła II w Lublinie
