@@ -25,4 +25,4 @@ Wystarczy otworzyć plik `index.html` w przeglądarce.
 
 ## Autor
 
-[Aleksandra Frąk]
+Aleksandra Frąk
