@@ -1,28 +1,63 @@
 # DispatchIQ
 
-Projekt strony statycznej przedstawiającej system wspierający zarządzanie ratownictwem w czasie rzeczywistym.
+DispatchIQ to statyczna strona internetowa prezentująca koncepcję platformy wspierającej zarządzanie ratownictwem w czasie rzeczywistym.
 
-## Opis projektu
+## Cel projektu
 
-DispatchIQ to koncepcja platformy dla dyspozytorni medycznych, umożliwiająca monitorowanie zespołów, analizę danych oraz optymalizację zgłoszeń.
+Celem projektu jest zaprojektowanie oraz wykonanie responsywnej strony typu one-page, zgodnej z wymaganiami projektu zaliczeniowego. Strona prezentuje fikcyjny system DispatchIQ, który wspiera dyspozytornie, stacje pogotowia oraz inne służby w monitorowaniu zespołów, triażowaniu zgłoszeń i analizie danych.
 
 ## Technologie
 
 - HTML5
 - CSS3
 - JavaScript
+- Figma
 
 ## Funkcjonalności
 
-- Strona typu one-page
-- Nawigacja między sekcjami
-- Responsywny layout
-- Sekcja informacyjna, funkcjonalna i kontaktowa
+- responsywna strona one-page
+- menu nawigacyjne z przewijaniem do sekcji
+- menu mobilne typu hamburger
+- sekcja w układzie trzech kolumn
+- komponent przycisku z wariantami w Figmie
+- wykorzystanie zmiennych CSS
+- semantyczna struktura HTML
+- podstawowe elementy dostępności
 
-## Uruchomienie
+## Struktura projektu
 
-Wystarczy otworzyć plik `index.html` w przeglądarce.
+```text
+dispatchiq/
+├── index.html
+├── style.css
+├── script.js
+├── README.md
 
-## Autor
+## Struktura projektu
+
+- index.html — struktura strony, sekcje, nawigacja i treść.
+- style.css — style, kolory, layout, responsywność i zmienne CSS.
+- script.js — obsługa mobilnego menu hamburger.
+- assets/images/ — folder przeznaczony na grafiki projektu.
+
+## Przygotowanie pod backend
+
+Projekt został przygotowany w sposób umożliwiający przyszłą rozbudowę o backend. W przyszłości można dodać:
+
+- formularz kontaktowy połączony z API,
+- dynamiczne dane dotyczące zgłoszeń,
+- panel logowania dla użytkowników,
+- integrację z bazą danych,
+- system raportów generowanych automatycznie.
+
+## Uruchomienie projektu
+
+1. Pobierz repozytorium.
+2. Otwórz folder projektu.
+3. Uruchom plik index.html w przeglądarce lub użyj rozszerzenia Live Server w VS Code.
+
+## Autor 
 
 Aleksandra Frąk
+Informatyka II stopiń, rok I, semestr II
+Katolicki Uniwersytet Lubelski Jana Pawła II w Lublinie
