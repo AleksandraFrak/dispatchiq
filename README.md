@@ -32,6 +32,7 @@ dispatchiq/
 ├── style.css
 ├── script.js
 ├── README.md
+```
 
 ## Struktura projektu
 
