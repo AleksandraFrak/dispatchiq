@@ -59,6 +59,10 @@ Projekt został przygotowany w sposób umożliwiający przyszłą rozbudowę o b
 2. Otwórz folder projektu.
 3. Uruchom plik index.html w przeglądarce lub użyj rozszerzenia Live Server w VS Code.
 
+## Projekt w Figmie
+
+https://www.figma.com/design/IZX5JwrvM0ii2TCEmG9jxS/DispatchIQ?node-id=0-1&t=Es6Nucltuk1ltzmq-1
+
 ## Autor 
 
 **Aleksandra Frąk**
