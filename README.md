@@ -41,6 +41,7 @@ dispatchiq/
 - style.css — style, kolory, layout, responsywność i zmienne CSS.
 - script.js — obsługa mobilnego menu hamburger.
 - README.md
+- analiza-ux.md
 
 ## Przygotowanie pod backend
 
