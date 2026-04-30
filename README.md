@@ -32,6 +32,7 @@ dispatchiq/
 ├── style.css
 ├── script.js
 ├── README.md
+├── analiza-ux.md
 ```
 
 ## Struktura projektu
@@ -39,7 +40,7 @@ dispatchiq/
 - index.html — struktura strony, sekcje, nawigacja i treść.
 - style.css — style, kolory, layout, responsywność i zmienne CSS.
 - script.js — obsługa mobilnego menu hamburger.
-- assets/images/ — folder przeznaczony na grafiki projektu.
+- README.md
 
 ## Przygotowanie pod backend
 
@@ -61,6 +62,6 @@ Projekt został przygotowany w sposób umożliwiający przyszłą rozbudowę o b
 
 **Aleksandra Frąk**
 
-Informatyka II stopiń, rok I, semestr II
+Informatyka II stopień, rok I, semestr II
 
 Katolicki Uniwersytet Lubelski Jana Pawła II w Lublinie
