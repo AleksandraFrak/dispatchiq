@@ -22,6 +22,7 @@
       <ul class="nav-list">
         <li><a href="#about">O produkcie</a></li>
         <li><a href="#features">Funkcje</a></li>
+        <li><a href="#incidents">Zgłoszenia</a></li>
         <li><a href="#audience">Dla kogo</a></li>
         <li><a href="#contact">Kontakt</a></li>
       </ul>
@@ -113,6 +114,76 @@
           <p>Generuj raporty i analizuj dane operacyjne w czasie rzeczywistym.</p>
         </article>
       </div>
+    </section>
+
+    <section id="incidents" class="incidents">
+      <div class="section-heading">
+        <h2>Aktualne zgłoszenia z dyspozytorni</h2>
+      </div>
+
+      <div class="incidents-toolbar" aria-live="polite">
+        <p id="incidents-summary">Ładowanie zgłoszeń...</p>
+        <button class="refresh-btn" type="button" id="refresh-incidents">Odśwież dane</button>
+      </div>
+
+      <form class="incident-form" id="incident-form">
+        <input type="hidden" id="incident-id" />
+
+        <div class="form-field">
+          <label for="incident-code">Kod</label>
+          <input id="incident-code" name="code" type="text" placeholder="ZGL-1034" required />
+        </div>
+
+        <div class="form-field form-field--wide">
+          <label for="incident-title">Opis zgłoszenia</label>
+          <input id="incident-title" name="title" type="text" placeholder="Np. podejrzenie złamania" required />
+        </div>
+
+        <div class="form-field">
+          <label for="incident-priority">Priorytet</label>
+          <select id="incident-priority" name="priority" required>
+            <option value="Krytyczny">Krytyczny</option>
+            <option value="Wysoki">Wysoki</option>
+            <option value="Średni">Średni</option>
+            <option value="Niski">Niski</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="incident-district">Dzielnica</label>
+          <input id="incident-district" name="district" type="text" placeholder="Np. Czechów" required />
+        </div>
+
+        <div class="form-field">
+          <label for="incident-unit">Jednostka</label>
+          <input id="incident-unit" name="unit" type="text" placeholder="ZRM-11" required />
+        </div>
+
+        <div class="form-field">
+          <label for="incident-status">Status</label>
+          <select id="incident-status" name="status" required>
+            <option value="Oczekuje">Oczekuje</option>
+            <option value="Przyjęte">Przyjęte</option>
+            <option value="W drodze">W drodze</option>
+            <option value="Na miejscu">Na miejscu</option>
+            <option value="Zamknięte">Zamknięte</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="incident-eta">ETA w minutach</label>
+          <input id="incident-eta" name="eta_minutes" type="number" min="0" value="5" required />
+        </div>
+
+        <div class="form-actions">
+          <button class="btn" type="submit" id="save-incident">Dodaj zgłoszenie</button>
+          <button class="refresh-btn" type="button" id="cancel-edit" hidden>Anuluj edycję</button>
+        </div>
+
+        <p class="form-message" id="incident-message" aria-live="polite"></p>
+      </form>
+
+      <div class="incidents-grid" id="incidents-list"></div>
     </section>
 
     <section id="audience" class="audience">

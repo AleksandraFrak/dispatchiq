@@ -223,6 +223,7 @@ a {
 
 .about,
 .features,
+.incidents,
 .contact {
   padding: 90px 24px;
   text-align: center;
@@ -234,6 +235,7 @@ a {
 
 .about h2,
 .features h2,
+.incidents h2,
 .audience h2,
 .contact h2 {
   font-size: 36px;
@@ -268,6 +270,252 @@ a {
 
 .features {
   background: #f1f5f9;
+}
+
+.incidents {
+  background: var(--white);
+}
+
+.section-heading {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.section-heading span {
+  display: block;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.section-heading p {
+  color: var(--text-secondary);
+}
+
+.incidents-toolbar {
+  max-width: 1050px;
+  margin: 44px auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: left;
+}
+
+.incidents-toolbar p {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.refresh-btn {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  color: var(--primary);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  min-height: 44px;
+  padding: 0 18px;
+  transition: 0.2s ease;
+}
+
+.refresh-btn:hover,
+.refresh-btn:focus {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.incident-form {
+  max-width: 1050px;
+  margin: 0 auto 28px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: #f8fafc;
+  padding: 24px;
+  text-align: left;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-field--wide {
+  grid-column: span 2;
+}
+
+.form-field label {
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  color: var(--text);
+  font: inherit;
+  padding: 0 12px;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  border-color: var(--accent);
+  outline: 3px solid rgba(239, 68, 68, 0.16);
+}
+
+.form-actions {
+  grid-column: span 2;
+  display: flex;
+  align-items: end;
+  gap: 12px;
+}
+
+.form-actions .btn {
+  border: none;
+  min-width: 170px;
+}
+
+.form-message {
+  grid-column: 1 / -1;
+  min-height: 22px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.form-message[data-type="success"] {
+  color: #15803d;
+}
+
+.form-message[data-type="error"] {
+  color: #b91c1c;
+}
+
+.incidents-grid {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  text-align: left;
+}
+
+.incident-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: #f8fafc;
+  padding: 24px;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+}
+
+.incident-card--error {
+  grid-column: 1 / -1;
+}
+
+.incident-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.incident-code {
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.priority {
+  border-radius: 999px;
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 10px;
+}
+
+.priority--critical {
+  background: #b91c1c;
+}
+
+.priority--high {
+  background: #ea580c;
+}
+
+.priority--medium {
+  background: #2563eb;
+}
+
+.priority--low {
+  background: #16a34a;
+}
+
+.incident-card h3 {
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.incident-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.incident-details dt {
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.incident-details dd {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.incident-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.incident-actions .refresh-btn,
+.delete-btn {
+  min-height: 40px;
+  padding: 0 14px;
+}
+
+.delete-btn {
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-sm);
+  background: #fff1f2;
+  color: #be123c;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.delete-btn:hover,
+.delete-btn:focus {
+  border-color: #be123c;
+  background: #ffe4e6;
 }
 
 .cards {
@@ -390,9 +638,16 @@ a {
   }
 
   .cards,
+  .incident-form,
+  .incidents-grid,
   .audience-grid,
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .form-field--wide,
+  .form-actions {
+    grid-column: auto;
   }
 
   .audience-grid article {
@@ -452,6 +707,7 @@ a {
 
   .about,
   .features,
+  .incidents,
   .audience,
   .contact {
     padding: 70px 20px;
@@ -459,9 +715,33 @@ a {
 
   .about h2,
   .features h2,
+  .incidents h2,
   .audience h2,
   .contact h2 {
     font-size: 30px;
+  }
+
+  .incidents-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .refresh-btn {
+    width: 100%;
+  }
+
+  .form-actions,
+  .incident-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+
+  .incident-details {
+    grid-template-columns: 1fr;
   }
 }
 

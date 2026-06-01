@@ -1,6 +1,6 @@
 # DispatchIQ
 
-DispatchIQ to statyczna strona internetowa prezentująca koncepcję platformy wspierającej zarządzanie ratownictwem w czasie rzeczywistym.
+DispatchIQ to dynamiczna strona internetowa prezentująca koncepcję platformy wspierającej zarządzanie ratownictwem w czasie rzeczywistym. Projekt zawiera frontend, prosty backend HTTP oraz bazę danych SQLite.
 
 ## Cel projektu
 
@@ -11,6 +11,8 @@ Celem projektu jest zaprojektowanie oraz wykonanie responsywnej strony typu one-
 - HTML5
 - CSS3
 - JavaScript
+- Python 3
+- SQLite
 - Figma
 
 ## Funkcjonalności
@@ -19,6 +21,11 @@ Celem projektu jest zaprojektowanie oraz wykonanie responsywnej strony typu one-
 - menu nawigacyjne z przewijaniem do sekcji
 - menu mobilne typu hamburger
 - sekcja w układzie trzech kolumn
+- backend zwracający dane w formacie JSON
+- baza danych SQLite z przykładowymi zgłoszeniami
+- dynamiczne pobieranie danych przez `fetch()`
+- wyświetlanie zgłoszeń z bazy danych na stronie
+- dodawanie, edycja i usuwanie zgłoszeń z poziomu strony
 - komponent przycisku z wariantami w Figmie
 - wykorzystanie zmiennych CSS
 - semantyczna struktura HTML
@@ -31,6 +38,9 @@ dispatchiq/
 ├── index.html
 ├── style.css
 ├── script.js
+├── backend/
+│   ├── server.py
+│   └── dispatchiq.db
 ├── README.md
 ├── analiza-ux.md
 ```
@@ -39,25 +49,50 @@ dispatchiq/
 
 - index.html — struktura strony, sekcje, nawigacja i treść.
 - style.css — style, kolory, layout, responsywność i zmienne CSS.
-- script.js — obsługa mobilnego menu hamburger.
+- script.js — obsługa mobilnego menu hamburger, pobieranie zgłoszeń z API oraz formularz CRUD.
+- backend/server.py — serwer HTTP, endpointy API, operacje CRUD i inicjalizacja bazy SQLite.
+- backend/dispatchiq.db — baza danych tworzona automatycznie przy pierwszym uruchomieniu backendu.
 - README.md
 - analiza-ux.md
 
-## Przygotowanie pod backend
+## Backend i API
 
-Projekt został przygotowany w sposób umożliwiający przyszłą rozbudowę o backend. W przyszłości można dodać:
+Backend jest napisany w Pythonie i korzysta wyłącznie z bibliotek standardowych. Po uruchomieniu tworzy bazę SQLite oraz uzupełnia ją minimum 10 rekordami.
 
-- formularz kontaktowy połączony z API,
-- dynamiczne dane dotyczące zgłoszeń,
-- panel logowania dla użytkowników,
-- integrację z bazą danych,
-- system raportów generowanych automatycznie.
+Dostępne endpointy:
+
+```text
+GET /api/incidents
+POST /api/incidents
+PUT /api/incidents/{id}
+DELETE /api/incidents/{id}
+```
+
+Endpointy pobierają, dodają, edytują i usuwają zgłoszenia w bazie danych. Dane są zwracane w formacie JSON.
 
 ## Uruchomienie projektu
 
 1. Pobierz repozytorium.
 2. Otwórz folder projektu.
-3. Uruchom plik index.html w przeglądarce lub użyj rozszerzenia Live Server w VS Code.
+3. Uruchom backend:
+
+```bash
+python3 backend/server.py
+```
+
+4. Otwórz stronę w przeglądarce:
+
+```text
+http://127.0.0.1:8000
+```
+
+5. Endpoint API jest dostępny pod adresem:
+
+```text
+http://127.0.0.1:8000/api/incidents
+```
+
+Po uruchomieniu strony można zarządzać zgłoszeniami bezpośrednio w sekcji „Aktualne zgłoszenia z dyspozytorni”. Formularz dodaje nowe rekordy do bazy, a przyciski na kartach umożliwiają edycję i usuwanie istniejących zgłoszeń.
 
 ## Projekt w Figmie
 
